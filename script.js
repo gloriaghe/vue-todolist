@@ -1,6 +1,8 @@
 var myToDoListApp = new Vue ({
     el: '#container',
-    data:{
+    data:{ 
+        newToDo : "",
+        newTD : {},
         to_do_lists : [
             {
                 text: 'Comprare la spesa',
@@ -29,6 +31,22 @@ var myToDoListApp = new Vue ({
     methods:{
         deleteToDo(i){
             this.to_do_lists.splice(i,1)
-        }
+        },
+
+        createToDo(){
+            class newTD {
+                constructor(text, done){
+                    this.text = text;
+                    this.done = done;
+                }
+            };
+            if(this.newToDo !== ""){
+                // this.to_do_lists.push(this.newToDo.text)
+                let nuovo = new newTD(this.newToDo, false);
+                this.to_do_lists.push(nuovo);
+                this.newToDo = "";
+            }
+        },
+
     }
 });

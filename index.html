@@ -12,8 +12,8 @@
 <body>
     <div id="container">
         <div class="new-toDo">
-            <input type="text">
-            <button>Aggiungi alla lista</button>
+            <input type="text" v-model="newToDo" @keyup.enter="createToDo">
+            <button @click="createToDo">Aggiungi alla lista</button>
         </div>
         <div class="toDoUl" >
             <ul>
