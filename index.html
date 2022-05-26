@@ -17,7 +17,7 @@
         </div>
         <div class="toDoUl" >
             <ul>
-                <li v-for="(element, name, i) in to_do_lists" @click="changeDone" :key="i" :class="element.done === true ? 'line' :'' " class="toDoItem" :id="i">
+                <li v-for="(element, name, i) in to_do_lists" @click="changeDone(name)" :id="name" :key="name" :class="element.done === true ? 'line' :'' " class="toDoItem" >
                     <span>{{element.text}}</span>
                     <i @click="deleteToDo(name)" class="fas fa-times"></i>
                 </li>

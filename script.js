@@ -48,8 +48,8 @@ var myToDoListApp = new Vue ({
             }
         },
 
-        changeDone (){
-           let changeD = document.querySelector(".toDoItem");
+        changeDone (name){
+           let changeD = document.getElementById(name);
            changeD.classList.toggle("line")
         },
     }
