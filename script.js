@@ -27,6 +27,8 @@ var myToDoListApp = new Vue ({
     },
     
     methods:{
-       
+        deleteToDo(i){
+            this.to_do_lists.splice(i,1)
+        }
     }
 });

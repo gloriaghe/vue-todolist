@@ -18,8 +18,8 @@
         <div class="toDoUl" >
             <ul>
                 <li v-for="(element, name, i) in to_do_lists" :key="i" :class="element.done === true ? 'line' :'' " class="toDoItem">
-                    {{element.text}}
-                    <i class="fas fa-times"></i>
+                    <span>{{element.text}}</span>
+                    <i @click="deleteToDo(name)" class="fas fa-times"></i>
                 </li>
             </ul>
         </div>
