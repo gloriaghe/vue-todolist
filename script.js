@@ -48,9 +48,9 @@ var myToDoListApp = new Vue ({
             }
         },
 
-        changeDone (done){
-           
-            this.to_do_lists.classList.toggle(".line")
+        changeDone (){
+           let changeD = document.querySelector(".toDoItem");
+           changeD.classList.toggle("line")
         },
     }
 });
