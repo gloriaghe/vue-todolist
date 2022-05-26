@@ -11,19 +11,23 @@
 </head>
 <body>
     <div id="container">
-        <div class="new-toDo">
-            <input type="text" v-model="newToDo" @keyup.enter="createToDo">
-            <button @click="createToDo">Aggiungi alla lista</button>
-        </div>
+        <header>
+            <h1>LA TUA LISTA:</h1>
+            <div class="new-toDo">
+                <input type="text" v-model="newToDo" @keyup.enter="createToDo">
+                <button @click="createToDo">Aggiungi alla lista</button>
+            </div>
+        </header>
         <div class="toDoUl" >
-            <ul>
+            <ul v-if="to_do_lists.length > 0" >
                 <li v-for="(element, name, i) in to_do_lists" @click="changeDone(name)" :id="name" :key="name" :class="element.done === true ? 'line' :'' " class="toDoItem" >
                     <span>{{element.text}}</span>
                     <i @click="deleteToDo(name)" class="fas fa-times"></i>
                 </li>
             </ul>
+            <h2 v-else>Aggiungi i tuoi to-do alla lista !</h2>
         </div>
-
+        <footer>Made with &hearts; By Gloria !</footer>
 
     </div>
 

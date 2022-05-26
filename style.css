@@ -6,21 +6,55 @@
 
 #container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    background-image: url(https://img.freepik.com/free-vector/abstract-watercolor-background_23-2149038179.jpg);
+    background-size: cover;
+    min-height: 100vh;
 }
 
-.new-toDo{
-    margin: 30px 0;
+h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    color: rgb(253, 30, 104);
+    font-weight: bolder;
+    margin-top: 50px;
 }
 
+h2{
+    color: blueviolet;
+}
+
+input {
+font-size: 20px;
+color: rgb(245, 138, 156);
+cursor: pointer;
+}
+
+button {
+ background-color: plum;
+ padding: 8px;
+ border-radius: 5px;
+ margin-left: 30px;
+ color: white;
+ font-size: 20px;
+ cursor: pointer;
+}
+
+.todoUl{
+    overflow: auto;
+}
 
 .toDoItem{
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
-    min-width: 400px;
+    min-width: 600px;
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: rgb(254, 74, 104);
+    cursor: pointer;
 }
 
 .fa-times{
@@ -29,4 +63,13 @@
 
 .line {
     text-decoration: line-through;
+}
+
+footer{
+    color: white;
+    background-color: palevioletred;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
 }
