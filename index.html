@@ -20,8 +20,8 @@
         </header>
         <div class="toDoUl" >
             <ul v-if="to_do_lists.length > 0" >
-                <li v-for="(element, name, i) in to_do_lists" @click="changeDone(name)" :id="name" :key="name" :class="element.done === true ? 'line' :'' " class="toDoItem" >
-                    <span>{{element.text}}</span>
+                <li v-for="(element, name, i) in to_do_lists":id="name" :key="name" :class="element.done === true ? 'line' :'' " class="toDoItem" >
+                    <span @click="changeDone(name)" >{{element.text}}</span>
                     <i @click="deleteToDo(name)" class="fas fa-times"></i>
                 </li>
             </ul>
