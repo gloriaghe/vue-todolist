@@ -41,7 +41,6 @@ var myToDoListApp = new Vue ({
                 }
             };
             if(this.newToDo !== ""){
-                // this.to_do_lists.push(this.newToDo.text)
                 let nuovo = new newTD(this.newToDo, false);
                 this.to_do_lists.push(nuovo);
                 this.newToDo = "";
